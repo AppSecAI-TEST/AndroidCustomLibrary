@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="FullScreenActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DefaultNoActionBarActivityTheme" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
+</resources>

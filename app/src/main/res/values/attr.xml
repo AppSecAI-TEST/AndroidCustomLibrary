@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DsResizeImageView -->
+    <declare-styleable name="DsResizeImageView">
+        <attr name="resize_dp_width" format="float" />
+        <attr name="resize_dp_height" format="float" />
+        <attr name="resize_scale_factor" format="enum">
+            <enum name="X" value="0" />
+            <enum name="Y" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

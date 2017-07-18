@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- shape -->
+    <color name="shape_base_round_stroke">#cacaca</color>
+
+    <!-- line -->
+    <color name="line_base">#cacaca</color>
+
+    <!-- common -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="background_black">#80000000</color>
+    <color name="empty">#00000000</color>
+    <color name="accent">#ff204a</color>
+    <color name="accent_alpha">#0Aff204a</color>
+
+    <!-- activity -->
+    <color name="activity_default_background">#f5f5f5</color>
+</resources>
