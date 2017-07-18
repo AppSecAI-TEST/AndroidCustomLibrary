@@ -29,11 +29,15 @@ public class MainActivity extends DsBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DsDisplayUtils.init(this, DisplayMetrics.DENSITY_XXHIGH, 1080, 1920);
-        DsUpdateLooper.getInstance().start();
+        init();
 
         initMenuList();
         initRecyclerView();
+    }
+
+    private void init() {
+        DsDisplayUtils.init(this, DisplayMetrics.DENSITY_XXHIGH, 1080, 1920);
+        DsUpdateLooper.getInstance().start();
     }
 
     private void initMenuList() {
@@ -86,6 +90,10 @@ public class MainActivity extends DsBaseActivity {
 
                 case VIDEO:
                     startActivity(VideoActivity.class, true);
+                    break;
+
+                case DATABASE:
+                    startActivity(DatabaseActivity.class, true);
                     break;
 
                 default:

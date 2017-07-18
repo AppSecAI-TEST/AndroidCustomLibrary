@@ -38,6 +38,11 @@
             android:configChanges="keyboardHidden|screenSize|orientation">
 
         </activity>
+        <activity
+            android:name=".test.DatabaseActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

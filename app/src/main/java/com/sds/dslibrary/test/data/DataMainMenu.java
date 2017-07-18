@@ -11,6 +11,7 @@ public class DataMainMenu {
         COORDINATOR("Coordinator"),
         TIME_SCHEDULE("Time Schedule"),
         VIDEO("Video"),
+        DATABASE("Database - SQLite"),
         ;
 
         public String mTitle;
