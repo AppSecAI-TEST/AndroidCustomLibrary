@@ -29,4 +29,8 @@ public abstract class DsDataBindRecyclerViewItem extends DsRelativeLayout {
     public void onBindData(DsRecyclerViewHolder.ItemInfo itemInfo, Object obj) {
         mItemInfo = itemInfo;
     }
+
+    public DsRecyclerViewHolder.ItemInfo getItemInfo() {
+        return mItemInfo;
+    }
 }
