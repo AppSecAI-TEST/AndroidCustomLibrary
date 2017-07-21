@@ -7,6 +7,7 @@ package com.sds.dslibrary.test.data;
 public class DataMainMenu {
 
     public enum Item {
+        DEVICE_INFO("Device info"),
         INFINITE_VIEWPAGER("ViewPager - Infinite"),
         COORDINATOR("Coordinator"),
         TIME_SCHEDULE("Time Schedule"),

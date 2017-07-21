@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.sds.dslibrary.lib.popup.DsPopup;
 import com.sds.dslibrary.lib.utils.DsResourceUtils;
 import com.sds.dslibrary.lib.utils.update.DsUpdateLooper;
 import com.sds.dslibrary.lib.utils.update.DsUpdateUtils;
@@ -32,16 +31,16 @@ public class DsBaseActivity extends AppCompatActivity {
         DsUpdateLooper.getInstance().add(mUpdateUtils);
     }
 
-    public void addPopup(DsPopup popup) {
+    public void addPopup(View v) {
         if (mLayoutPopupContainer != null) {
             mLayoutPopupContainer.bringToFront();
-            mLayoutPopupContainer.addView(popup);
+            mLayoutPopupContainer.addView(v);
         }
     }
 
-    public void removePopup(DsPopup popup) {
+    public void removePopup(View v) {
         if (mLayoutPopupContainer != null) {
-            mLayoutPopupContainer.removeView(popup);
+            mLayoutPopupContainer.removeView(v);
         }
     }
 
@@ -69,6 +68,10 @@ public class DsBaseActivity extends AppCompatActivity {
 
     public void showToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public void onProcessBackPressed() {
+        super.onBackPressed();
     }
 
     @Override
@@ -101,16 +104,16 @@ public class DsBaseActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
-        mUpdateUtils.onPause();
-
         super.onPause();
+
+        mUpdateUtils.onPause();
     }
 
     @Override
     protected void onDestroy() {
-        mUpdateUtils.onDestroy();
-
         super.onDestroy();
+
+        mUpdateUtils.onDestroy();
     }
 
     @Override
@@ -121,10 +124,10 @@ public class DsBaseActivity extends AppCompatActivity {
             if (childCount > 0) {
                 mLayoutPopupContainer.removeViewAt(childCount - 1);
             } else {
-                super.onBackPressed();
+                onProcessBackPressed();
             }
         } else {
-            super.onBackPressed();
+            onProcessBackPressed();
         }
     }
 }

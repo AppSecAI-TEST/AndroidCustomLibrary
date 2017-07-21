@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sds.dslibrary.lib.activity.DsBaseActivity;
-import com.sds.dslibrary.lib.popup.DsPopup;
 
 /**
  * Created by sds on 2017-07-07.
@@ -17,7 +16,7 @@ import com.sds.dslibrary.lib.popup.DsPopup;
 
 public abstract class DsFragment extends Fragment {
 
-    protected View mRootView = null;
+    private View mRootView = null;
 
     public DsFragment() {
         super();
@@ -45,17 +44,17 @@ public abstract class DsFragment extends Fragment {
         return null;
     }
 
-    public void addPopup(DsPopup popup) {
+    public void addPopup(View v) {
         FragmentActivity activity = getActivity();
         if (activity instanceof DsBaseActivity) {
-            ((DsBaseActivity) activity).addPopup(popup);
+            ((DsBaseActivity) activity).addPopup(v);
         }
     }
 
-    public void removePopup(DsPopup popup) {
+    public void removePopup(View v) {
         FragmentActivity activity = getActivity();
         if (activity instanceof DsBaseActivity) {
-            ((DsBaseActivity) activity).removePopup(popup);
+            ((DsBaseActivity) activity).removePopup(v);
         }
     }
 

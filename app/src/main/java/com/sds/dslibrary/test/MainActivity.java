@@ -76,6 +76,10 @@ public class MainActivity extends DsBaseActivity {
             DataMainMenu.Item item = ((MainMenuItem) v).getData();
 
             switch (item) {
+                case DEVICE_INFO:
+                    startActivity(DeviceInfoActivity.class, true);
+                    break;
+
                 case INFINITE_VIEWPAGER:
                     startActivity(ViewPagerActivity.class, true);
                     break;

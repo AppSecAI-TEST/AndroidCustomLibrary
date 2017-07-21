@@ -27,7 +27,7 @@ public class DsResizeImageView extends AppCompatImageView {
     private int mScaleFactorDir;
 
     public DsResizeImageView(Context context) {
-        super(context);
+        this(context, null);
     }
 
     public DsResizeImageView(Context context, AttributeSet attrs) {

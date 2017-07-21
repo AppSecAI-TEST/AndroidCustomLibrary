@@ -35,6 +35,9 @@ public class DsTimer implements DsUpdateUtils.OnUpdater {
                         mListener.onUpdate(mRemainMillis);
                     }
                     break;
+
+                default:
+                    break;
             }
         }
     }
