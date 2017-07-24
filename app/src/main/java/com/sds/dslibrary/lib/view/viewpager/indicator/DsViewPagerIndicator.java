@@ -58,13 +58,13 @@ public class DsViewPagerIndicator extends RelativeLayout {
         addView(mViewContainer);
     }
 
-    public void init(int count, int resDefault, int resSelect) {
+    public DsViewPagerIndicator init(int count, int resDefault, int resSelect) {
         int marginLeft = dpToPx(DEFAULT_MARGIN_LEFT);
         int marginTop = dpToPx(DEFAULT_MARGIN_TOP);
         int marginRight = dpToPx(DEFAULT_MARGIN_RIGHT);
         int marginBottom = dpToPx(DEFAULT_MARGIN_BOTTOM);
 
-        this.init(count, resDefault, resSelect,
+        return this.init(count, resDefault, resSelect,
                 marginLeft, marginTop, marginRight, marginBottom);
     }
 
