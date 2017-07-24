@@ -88,6 +88,10 @@ public class MainActivity extends DsBaseActivity {
                     startActivity(CoordinatorActivity.class, true);
                     break;
 
+                case NAVIGATION:
+                    startActivity(NavigationActivity.class, true);
+                    break;
+
                 case TIME_SCHEDULE:
                     startActivity(TimeScheduleActivity.class, true);
                     break;

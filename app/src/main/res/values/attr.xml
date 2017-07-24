@@ -9,4 +9,9 @@
             <enum name="Y" value="1" />
         </attr>
     </declare-styleable>
+
+    <!-- DsDrawableLayout -->
+    <declare-styleable name="DsDrawerLayout">
+        <attr name="minDrawerMargin" format="integer" />
+    </declare-styleable>
 </resources>

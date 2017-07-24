@@ -10,6 +10,7 @@ public class DataMainMenu {
         DEVICE_INFO("Device info"),
         INFINITE_VIEWPAGER("ViewPager - Infinite"),
         COORDINATOR("Coordinator"),
+        NAVIGATION("Navigation"),
         TIME_SCHEDULE("Time Schedule"),
         VIDEO("Video"),
         DATABASE("Database - SQLite"),

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sds.dslibrary.lib.view.viewpager.DsDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    app:minDrawerMargin="0">
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/layout_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/accent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#00ffff">
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</com.sds.dslibrary.lib.view.viewpager.DsDrawerLayout>
