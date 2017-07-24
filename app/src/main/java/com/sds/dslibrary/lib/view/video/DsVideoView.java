@@ -10,7 +10,15 @@ import android.widget.VideoView;
  */
 
 /**
+ * < 연결 관계 >
  * VideoView <-> MediaController <-> CustomMediaControllerView
+ *
+ * < 호출 순서 >
+ * 1. DsVideoView.setMediaController() 을 호출
+ * 2. 내부에서 DsSimpleMediaController.setAnchorView() 가 호출 됨
+ * 3. 내부에서 DsSimpleMediaController.makeControllerView() 가 호출 됨
+ * 4. ControllerView 가 DsMediaControllerViewListener 를 implement 했다면
+ * onConnectedMediaPlayer() 를 호출 함
  */
 public class DsVideoView extends VideoView {
 
