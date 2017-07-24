@@ -22,24 +22,37 @@ public abstract class DsSimpleMediaController extends MediaController {
         super(context, attrs);
     }
 
+    public MediaPlayerControl getMediaPlayer() {
+        return mPlayer;
+    }
+
+    /**
+     * VideoView 의 setMediaController 에 의해 호출 됨
+     * before called {@link #setMediaPlayer}
+     * @param view video view's parent or video view
+     */
     @Override
     public void setAnchorView(View view) {
-        View v = makeControllerView(this);
-
         super.setAnchorView(view);
 
+        View v = makeControllerView(this);
         if (v != null) {
-            if (v instanceof DsMediaControllerViewListener) {
-                ((DsMediaControllerViewListener) v).setMediaPlayer(mPlayer);
-            }
+            removeAllViews();
 
             ViewGroup.LayoutParams lp = makeLayoutParams();
-
-            removeAllViews();
             addView(v, lp != null ? lp : generateDefaultLayoutParams());
+
+            if (v instanceof DsMediaControllerViewListener) {
+                ((DsMediaControllerViewListener) v).onConnectedMediaPlayer(mPlayer);
+            }
         }
     }
 
+    /**
+     * VideoView 의 setMediaController 에 의해 호출 됨
+     * after called {@link #setAnchorView}
+     * @param player video view
+     */
     @Override
     public void setMediaPlayer(MediaPlayerControl player) {
         mPlayer = player;
@@ -47,11 +60,6 @@ public abstract class DsSimpleMediaController extends MediaController {
         super.setMediaPlayer(player);
     }
 
-    public MediaPlayerControl getMediaPlayer() {
-        return mPlayer;
-    }
-
     public abstract View makeControllerView(ViewGroup parent);
-
     public abstract ViewGroup.LayoutParams makeLayoutParams();
 }

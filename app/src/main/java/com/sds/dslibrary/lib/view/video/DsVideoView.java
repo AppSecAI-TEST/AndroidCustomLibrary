@@ -9,6 +9,9 @@ import android.widget.VideoView;
  * Created by sds on 2017-07-07.
  */
 
+/**
+ * VideoView <-> MediaController <-> CustomMediaControllerView
+ */
 public class DsVideoView extends VideoView {
 
     private MediaController mMediaController = null;

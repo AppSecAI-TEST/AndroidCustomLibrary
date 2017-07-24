@@ -7,5 +7,5 @@ import android.widget.MediaController;
  */
 
 public interface DsMediaControllerViewListener {
-    void setMediaPlayer(MediaController.MediaPlayerControl player);
+    void onConnectedMediaPlayer(MediaController.MediaPlayerControl player);
 }
