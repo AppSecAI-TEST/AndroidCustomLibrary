@@ -1,4 +1,4 @@
-package com.sds.dslibrary.lib.view.viewpager;
+package com.sds.dslibrary.lib.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
