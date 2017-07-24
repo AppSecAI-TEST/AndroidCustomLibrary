@@ -12,6 +12,6 @@
 
     <!-- DsDrawableLayout -->
     <declare-styleable name="DsDrawerLayout">
-        <attr name="minDrawerMargin" format="integer" />
+        <attr name="minDrawerMargin_dp" format="float" />
     </declare-styleable>
 </resources>

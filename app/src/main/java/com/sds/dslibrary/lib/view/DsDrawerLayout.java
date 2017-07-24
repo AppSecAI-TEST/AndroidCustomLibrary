@@ -37,9 +37,8 @@ public class DsDrawerLayout extends DrawerLayout {
     private void reflection(Context c, AttributeSet attrs) {
         TypedArray a = c.obtainStyledAttributes(attrs, R.styleable.DsDrawerLayout);
 
-        final float density = getResources().getDisplayMetrics().density;
-        int defaultDrawerMargin = (int) (DEFAULT_DRAWER_MARGIN * density + 0.5f);
-        int minDrawerMargin = a.getInt(R.styleable.DsDrawerLayout_minDrawerMargin, defaultDrawerMargin);
+        float attrMargin = a.getFloat(R.styleable.DsDrawerLayout_minDrawerMargin_dp, DEFAULT_DRAWER_MARGIN);
+        int minDrawerMargin = dpToPx(attrMargin);
 
         a.recycle();
 
@@ -51,5 +50,10 @@ public class DsDrawerLayout extends DrawerLayout {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private int dpToPx(float dp) {
+        final float density = getResources().getDisplayMetrics().density;
+        return (int) (dp * density + 0.5f);
     }
 }
