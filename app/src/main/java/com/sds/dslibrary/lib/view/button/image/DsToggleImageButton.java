@@ -51,7 +51,7 @@ public class DsToggleImageButton extends DsBaseImageButton {
     public void setOnOff(boolean isOn) {
         mIsOn = isOn;
 
-        updateImageWithState(DsClickDetector.TouchState.UP, !isDisabled());
+        onTouchDetectedWithState(DsClickDetector.TouchState.UP, !isDisabled());
     }
 
     private void setImageResourceWithSave(int resId) {
@@ -71,7 +71,7 @@ public class DsToggleImageButton extends DsBaseImageButton {
     }
 
     @Override
-    public void updateImageWithState(DsClickDetector.TouchState touchState, boolean isEnable) {
+    public void onTouchDetectedWithState(DsClickDetector.TouchState touchState, boolean isEnable) {
         int normal = mIsOn ? mOnResId : mOffResId;
         int press = mIsOn ? mOffResId : mOnResId;
 

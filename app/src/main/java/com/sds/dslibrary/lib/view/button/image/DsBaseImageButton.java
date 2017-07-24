@@ -53,7 +53,7 @@ public abstract class DsBaseImageButton extends AppCompatImageButton implements 
 
     @Override
     public void onDetect(DsClickDetector.TouchState touchState, boolean isEnable) {
-        updateImageWithState(touchState, isEnable);
+        onTouchDetectedWithState(touchState, isEnable);
     }
 
     @Override
@@ -69,6 +69,6 @@ public abstract class DsBaseImageButton extends AppCompatImageButton implements 
         return mClickDetector.isDisabled();
     }
 
-    public abstract void updateImageWithState(DsClickDetector.TouchState touchState, boolean isEnable);
+    public abstract void onTouchDetectedWithState(DsClickDetector.TouchState touchState, boolean isEnable);
     public abstract void onClickViewWithEnable(View v, boolean isEnable);
 }

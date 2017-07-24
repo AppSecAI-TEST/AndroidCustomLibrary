@@ -56,7 +56,7 @@ public class DsTextButton extends DsBaseTextButton {
     }
 
     @Override
-    public void updateImageWithState(DsClickDetector.TouchState touchState, boolean isEnable) {
+    public void onTouchDetectedWithState(DsClickDetector.TouchState touchState, boolean isEnable) {
         if (isEnable) {
             switch (touchState) {
                 case PRESS:

@@ -49,7 +49,7 @@ public class DsToggleTextButton extends DsBaseTextButton {
     public void setOnOff(boolean isOn) {
         mIsOn = isOn;
 
-        updateImageWithState(DsClickDetector.TouchState.UP, !isDisabled());
+        onTouchDetectedWithState(DsClickDetector.TouchState.UP, !isDisabled());
     }
 
     private void setBackgroundColorWithSave(int color) {
@@ -65,7 +65,7 @@ public class DsToggleTextButton extends DsBaseTextButton {
     }
 
     @Override
-    public void updateImageWithState(DsClickDetector.TouchState touchState, boolean isEnable) {
+    public void onTouchDetectedWithState(DsClickDetector.TouchState touchState, boolean isEnable) {
         int normal = mIsOn ? mBgOnColor : mBgOffColor;
         int press = mIsOn ? mBgOffColor : mBgOnColor;
 
