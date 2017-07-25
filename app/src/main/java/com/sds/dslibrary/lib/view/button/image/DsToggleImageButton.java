@@ -100,11 +100,11 @@ public class DsToggleImageButton extends DsBaseImageButton {
         }
 
         if (mOnClickCallback != null) {
-            mOnClickCallback.onClickView(v, isEnable, mIsOn);
+            mOnClickCallback.onClickView(this, isEnable, mIsOn);
         }
     }
 
     public interface OnClickCallback {
-        void onClickView(View v, boolean isEnable, boolean isOn);
+        void onClickView(DsToggleImageButton button, boolean isEnable, boolean isOn);
     }
 }

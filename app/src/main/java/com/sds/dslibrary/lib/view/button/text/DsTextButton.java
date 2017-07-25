@@ -78,11 +78,11 @@ public class DsTextButton extends DsBaseTextButton {
     @Override
     public void onClickViewWithEnable(View v, boolean isEnable) {
         if (mOnClickCallback != null) {
-            mOnClickCallback.onClickView(v, isEnable);
+            mOnClickCallback.onClickView(this, isEnable);
         }
     }
 
     public interface OnClickCallback {
-        void onClickView(View v, boolean isEnable);
+        void onClickView(DsTextButton button, boolean isEnable);
     }
 }

@@ -84,11 +84,11 @@ public class DsImageButton extends  DsBaseImageButton {
     @Override
     public void onClickViewWithEnable(View v, boolean isEnable) {
         if (mOnClickCallback != null) {
-            mOnClickCallback.onClickView(v, isEnable);
+            mOnClickCallback.onClickView(this, isEnable);
         }
     }
 
     public interface OnClickCallback {
-        void onClickView(View v, boolean isEnable);
+        void onClickView(DsImageButton button, boolean isEnable);
     }
 }

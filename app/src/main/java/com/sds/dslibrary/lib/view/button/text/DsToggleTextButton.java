@@ -94,11 +94,11 @@ public class DsToggleTextButton extends DsBaseTextButton {
         }
 
         if (mOnClickCallback != null) {
-            mOnClickCallback.onClickView(v, isEnable, mIsOn);
+            mOnClickCallback.onClickView(this, isEnable, mIsOn);
         }
     }
 
     public interface OnClickCallback {
-        void onClickView(View v, boolean isEnable, boolean isOn);
+        void onClickView(DsToggleTextButton button, boolean isEnable, boolean isOn);
     }
 }
