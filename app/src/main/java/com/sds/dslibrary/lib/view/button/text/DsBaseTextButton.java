@@ -1,7 +1,7 @@
 package com.sds.dslibrary.lib.view.button.text;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -12,7 +12,7 @@ import com.sds.dslibrary.lib.view.button.DsClickDetector;
  * Created by sds on 2017-07-07.
  */
 
-public abstract class DsBaseTextButton extends AppCompatButton implements DsClickDetector.OnClickDetectListener {
+public abstract class DsBaseTextButton extends AppCompatTextView implements DsClickDetector.OnClickDetectListener {
 
     private final DsClickDetector mClickDetector = new DsClickDetector();
 
@@ -48,7 +48,7 @@ public abstract class DsBaseTextButton extends AppCompatButton implements DsClic
             return false;
         }
 
-        return super.onTouchEvent(e);
+        return true; //super.onTouchEvent(e);
     }
 
     @Override
