@@ -79,6 +79,10 @@ public abstract class DsFragment extends Fragment {
         }
     }
 
+    public View getRootView() {
+        return mRootView;
+    }
+
     public abstract void onActivityCreated();
     public abstract int getLayoutResId();
 }
